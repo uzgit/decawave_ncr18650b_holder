@@ -1,5 +1,3 @@
-//46, 35
-
 width = 43.5;
 length = 60;
 thickness = 1;
@@ -25,15 +23,15 @@ difference()
 {
     union()
     {
-        translate([-width/2, -length/2 + 10, 0])
+        translate([-width/2, -length/2 + 20, 0])
         cube([width, length, thickness]);
         
-        translate([0, -length/2, 0])
-        import("../stl/Battery_Holder_V2_102p.stl");
+        translate([-31.5, -length/2, 0])
+        import("../stl/Battery_Holder.stl");
     }
     union()
     {
-        translate([0, length/5, 0])
+        translate([0, length/5 + 10, 0])
         mounting_holes();
     }
 }
